@@ -1,4 +1,4 @@
-# Simple API implementaion in Go
+# Simple API implementation in Go
 
 ## To Get Started
 #### Clone repo
@@ -24,35 +24,35 @@ go run main.go
 ```
 After that open another terminal window and insure the path of current working directory is `*/api-go-gin-viper/src/`
 ___
-## Add funder
-Adds a funder to the DB. Assuming that *address* and *amount* keys/values in `single_funder.json` are predefined by Frontend.
+## Add data
+Adds a data to the storage. Assuming that *address* and *amount* keys/values in `addData.json`
 ```bash
-curl localhost:8080/add-funder --header "Content-Type: application json" -d @single_funder.json --request "POST"
+curl localhost:8080/addData --header "Content-Type: application json" -d @examples/addData.json --request "POST"
 ```
-## Add funders
-Adds a list of funders one by one to the DB. The same keys/values from above are also predefined in `numerous_funders.json`.
+## Add dataset
+Adds a dataset. The same keys/values from above are also predefined in `addDataset.json`.
 ```bash
-curl localhost:8080/add-funders --header "Content-Type: application json" -d @numerous_funders.json --request "POST"
+curl localhost:8080/addDataset --header "Content-Type: application json" -d @examples/addDataset.json --request "POST"
 ```
-## Fetch funder
-Get a funder's data by assiging his/her **`id`** in the query.
+## Fetch data
+Get a data by assigning his/her **`id`** in the query.
 ```bash
-curl localhost:8080/fetch-funder?id=1 --request "GET"
+curl localhost:8080/fetchData?id=1 --request "GET"
 ```
-## Fetch funders
-Get a list of each funder's data from the DB.
+## Fetch dataset
+Get a addDataset from the storage.
 ```bash
-curl localhost:8080/fetch-funders --request "GET"
+curl localhost:8080/fetchDataset --request "GET"
 ```
-## Update funder
-Update funder's funded total amount by increasing it. Assign the **`id`** in the query to update a specific funder. 
+## Update date
+Update data amount by increasing it. Assign the **`id`** in the query to update a specific data. 
 ```bash
-curl localhost:8080/update-funder?id=1 --request "PATCH"
+curl localhost:8080/updateData?id=1 --request "PATCH"
 ```
-## Delete funder
-Delete a funder from DB. Assign funder's **`id`** in the query to delete the prefered one. 
+## Delete data
+Delete a data from storage. Assign data **`id`** in the query to delete the preferred one. 
 ```bash
-curl localhost:8080/delete-funder?id=1 --request "DELETE"
+curl localhost:8080/deleteData?id=1 --request "DELETE"
 ```
 # Licence
 **MIT**
