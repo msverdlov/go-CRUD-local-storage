@@ -1,7 +1,7 @@
 package model
 
 type (
-	AnyData struct {
+	AnyDataStruct struct {
 		Id         uint64 `json:"id"`
 		Address    string `json:"address"`
 		Date       string `json:"date"`
