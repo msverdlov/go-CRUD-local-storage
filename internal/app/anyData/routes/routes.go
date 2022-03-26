@@ -7,6 +7,10 @@ import (
 
 func InitRoutes() (router *gin.Engine) {
 	router = gin.Default()
+	err := router.SetTrustedProxies([]string{"192.168.0.1"})
+	if err != nil {
+		return nil
+	}
 
 	router.POST("/addData", controller.AddData)
 	router.POST("/addDataset", controller.AddDataset)
