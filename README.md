@@ -16,6 +16,10 @@ go get github.com/gin-gonic/gin
 ```bash
 go get github.com/spf13/viper
 ```
+
+5. Add to git
+`git remote set-url origin git@github.com:msverdlov/go-CRUD-local-storage.git`
+
 # Usage 
 ## Start server
 Run the command that starts the server on host `127.0.0.1` and port `8080`.
